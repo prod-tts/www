@@ -1,0 +1,19 @@
+#!/bin/bash
+DATE=`date`
+ROOT=/home/www
+LOG="$ROOT/log/gitpull.log"
+PID=""
+
+skipsites=""
+
+sites="
+www.thingtosell.com
+dev.thingtosell.com
+fb.thingtosell.com
+"
+
+echo "Starting gitpull" > $LOG
+for dir  in $sites; do
+  app="$ROOT/$dir"
+  (( echo "checking $app..." ) && [ -d "$app" ] && ( cd $app; echo "gitpull $app"; git pull )) >> $LOG  &
+done
