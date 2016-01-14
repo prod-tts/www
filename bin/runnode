@@ -9,7 +9,8 @@ PID=""
 
 sites="
 www.thingtosell.com
-dev.thingtosell.com
+wwwdev.thingtosell.com
+fbdev.thingtosell.com
 fb.thingtosell.com
 "
 
