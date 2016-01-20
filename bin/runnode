@@ -4,7 +4,7 @@
 
 DATE=`date`
 ROOT=/home/www
-LOG="$ROOT/log/run-node.log"
+LOG="$ROOT/log/runnode.log"
 PID=""
 
 sites="

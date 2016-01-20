@@ -32,3 +32,6 @@ tmp
 .meteor
 *.com
 dev
+.python-history
+0.10.38
+iotupdates

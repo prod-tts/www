@@ -7,5 +7,6 @@ if [ ! $fileName ]; then
 	echo "usage : $0 filename"
   exit 1
 else
-  ps -ef |grep $fileName | grep -v grep | awk '{ print $2}' | xargs kill -9
+#  ps -ef |grep $fileName | grep -v grep | awk '{ print $2}' | xargs kill -9
+  ps |grep $fileName | grep -v grep | awk '{ print $1}' | xargs kill -9
 fi

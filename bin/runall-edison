@@ -1,0 +1,11 @@
+
+[ -f ~/.profile ] && . ~/.profile
+
+ROOT=/home/www
+LOG=$HOME/log/runall-edison.log
+DATE=$(date)
+
+echo "$DATE" > $LOG
+( [ -x $ROOT/bin/runnode-edison ] && ( $ROOT/bin/runnode-edison )) 2>&1 >> $LOG
+( [ -x $ROOT/bin/gitpull-edison ] && ( $ROOT/bin/gitpull-edison )) 2>&1 >> $LOG
+
