@@ -18,6 +18,10 @@
 # 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
 # 
 # For more information see the manual pages of crontab(5) and cron(8)
+
+SHELL=/bin/sh
+PATH=/home/www/bin:/usr/local/nodejs/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
 # 
 # m h  dom mon dow   command
 * * * * *	[ -x /home/www/bin/runall-edison ] && ( /home/www/bin/runall-edison ) 2>&1 > /home/www/log/cron-edison.log &
